@@ -103,11 +103,6 @@ public class ExerciseImageAndNameDataClass {
         }
 
 
-
-
-
-
-
         return R.drawable.push_ups_wall;
     }
 
@@ -149,11 +144,36 @@ public class ExerciseImageAndNameDataClass {
             return R.string.push_ups_level_10_descriptions;
         }
 
+
         if (name.equals(resources.getString(R.string.squats_level_1))) {
             return R.string.squats_level_1_descriptions;
         }
         if (name.equals(resources.getString(R.string.squats_level_2))) {
             return R.string.squats_level_2_descriptions;
+        }
+        if (name.equals(resources.getString(R.string.squats_level_3))) {
+            return R.string.squats_level_3_descriptions;
+        }
+        if (name.equals(resources.getString(R.string.squats_level_4))) {
+            return R.string.squats_level_4_descriptions;
+        }
+        if (name.equals(resources.getString(R.string.squats_level_5))) {
+            return R.string.squats_level_5_descriptions;
+        }
+        if (name.equals(resources.getString(R.string.squats_level_6))) {
+            return R.string.squats_level_6_descriptions;
+        }
+        if (name.equals(resources.getString(R.string.squats_level_7))) {
+            return R.string.squats_level_7_descriptions;
+        }
+        if (name.equals(resources.getString(R.string.squats_level_8))) {
+            return R.string.squats_level_8_descriptions;
+        }
+        if (name.equals(resources.getString(R.string.squats_level_9))) {
+            return R.string.squats_level_9_descriptions;
+        }
+        if (name.equals(resources.getString(R.string.squats_level_10))) {
+            return R.string.squats_level_10_descriptions;
         }
 
 
