@@ -8,13 +8,17 @@
     android:clipToPadding="false"
     android:gravity="top"
     android:orientation="vertical"
-    android:padding="8dp">
+    android:padding="8dp"
+    android:layout_margin="1dp"
+    android:layout_marginLeft="1dp"
+    android:layout_marginRight="1dp"
+    android:background="@color/blue_100"
+    >
 
     <ImageView
         android:id="@+id/img_city"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="16dp"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         android:layout_weight="1"/>
@@ -29,6 +33,7 @@
         android:minLines="3"
         android:maxLines="3"
         android:ellipsize="end"
+        android:background="@color/white"
 
         />
 

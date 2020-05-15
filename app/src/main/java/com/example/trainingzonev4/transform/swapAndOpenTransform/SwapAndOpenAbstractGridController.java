@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.ViewCompat;
@@ -110,7 +109,7 @@ public abstract class SwapAndOpenAbstractGridController extends BaseController {
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            return new ViewHolder(inflater.inflate(R.layout.row_city_grid, parent, false));
+            return new ViewHolder(inflater.inflate(R.layout.row_exercise_grid, parent, false));
         }
 
         @Override
