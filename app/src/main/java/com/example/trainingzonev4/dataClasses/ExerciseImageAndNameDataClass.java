@@ -188,6 +188,24 @@ public class ExerciseImageAndNameDataClass {
         if (name.equals(resources.getString(R.string.tightening_level_4))) {
             return R.string.tightening_level_4_descriptions;
         }
+        if (name.equals(resources.getString(R.string.tightening_level_5))) {
+            return R.string.tightening_level_5_descriptions;
+        }
+        if (name.equals(resources.getString(R.string.tightening_level_6))) {
+            return R.string.tightening_level_6_descriptions;
+        }
+        if (name.equals(resources.getString(R.string.tightening_level_7))) {
+            return R.string.tightening_level_7_descriptions;
+        }
+        if (name.equals(resources.getString(R.string.tightening_level_8))) {
+            return R.string.tightening_level_8_descriptions;
+        }
+        if (name.equals(resources.getString(R.string.tightening_level_9))) {
+            return R.string.tightening_level_9_descriptions;
+        }
+        if (name.equals(resources.getString(R.string.tightening_level_10))) {
+            return R.string.tightening_level_10_descriptions;
+        }
 
 
         return R.string.exercise_level_default_descriptions;
