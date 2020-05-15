@@ -74,7 +74,7 @@ public  class CreateExerciseMenuSwipeController extends BaseController {
 
                 jsonOutToFile.put("Exercise", jsonArray);
 
-                String FILENAME = "MyExerciseList";
+                String FILENAME = getResources().getString(R.string.my_exercise_list_file_name);
 
                 try {
 

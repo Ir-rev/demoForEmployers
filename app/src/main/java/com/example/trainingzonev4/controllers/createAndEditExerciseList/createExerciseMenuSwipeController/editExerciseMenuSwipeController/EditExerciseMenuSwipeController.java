@@ -172,7 +172,7 @@ public class EditExerciseMenuSwipeController extends BaseController {
 
         FileInputStream fileInputStream = null;
         try {
-            fileInputStream = view.getContext().openFileInput("MyExerciseList");
+            fileInputStream = view.getContext().openFileInput(getResources().getString(R.string.my_exercise_list_file_name));
             byte[] bytes = new byte[fileInputStream.available()];
             fileInputStream.read(bytes);
             String jsonFromFile = new String (bytes);

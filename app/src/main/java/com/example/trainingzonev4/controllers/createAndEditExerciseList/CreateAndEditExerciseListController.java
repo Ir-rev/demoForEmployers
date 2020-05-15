@@ -27,8 +27,8 @@ public class CreateAndEditExerciseListController extends BaseController {
 
     enum MenuFilling{
 
-        CREATE(R.drawable.ic_fitness_center_black_24dp,R.string.create_exercise_list),
-        EDIT(R.drawable.ic_fitness_center_black_24dp,R.string.edit_exercise_list),
+        CREATE(R.drawable.ic_plus_vector_icon,R.string.create_exercise_list),
+        EDIT(R.drawable.ic_description_exercise,R.string.edit_exercise_list),
 
         ;
 
