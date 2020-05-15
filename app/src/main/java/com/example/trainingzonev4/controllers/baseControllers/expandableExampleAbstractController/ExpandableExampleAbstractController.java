@@ -28,16 +28,12 @@ import butterknife.BindView;
 public abstract class ExpandableExampleAbstractController extends BaseController implements RecyclerViewExpandableItemManager.OnGroupCollapseListener,
         RecyclerViewExpandableItemManager.OnGroupExpandListener {
 
-//    private static final String SAVED_STATE_EXPANDABLE_ITEM_MANAGER = "RecyclerViewExpandableItemManager";
-//
-//    private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
     private RecyclerView.Adapter mWrappedAdapter;
     private RecyclerViewExpandableItemManager mRecyclerViewExpandableItemManager;
 
 
     public ExpandableExampleAbstractController() {
-//        super();
     }
 
     @BindView(R.id.recycler_view)
@@ -48,11 +44,8 @@ public abstract class ExpandableExampleAbstractController extends BaseController
     @Override
     protected void onViewBound(@NonNull View view) {
         super.onViewBound(view);
-        //noinspection ConstantConditions
-//        mRecyclerView = getView().findViewById(R.id.recycler_view);
         mLayoutManager = new LinearLayoutManager(view.getContext());
 
-//        final Parcelable eimSavedState = (savedInstanceState != null) ? savedInstanceState.getParcelable(SAVED_STATE_EXPANDABLE_ITEM_MANAGER) : null;
         mRecyclerViewExpandableItemManager = new RecyclerViewExpandableItemManager(new Parcelable() {
             @Override
             public int describeContents() {
@@ -68,16 +61,12 @@ public abstract class ExpandableExampleAbstractController extends BaseController
         mRecyclerViewExpandableItemManager.setOnGroupExpandListener(this);
         mRecyclerViewExpandableItemManager.setOnGroupCollapseListener(this);
 
-        //adapter
-//        final ExpandableAbstractAdapter myItemAdapter = new ExpandableAbstractAdapter(new ExampleAbstractExpandableDataProvider());
         final ExpandableAbstractAdapter myItemAdapter = createAdapter();
 
         mWrappedAdapter = mRecyclerViewExpandableItemManager.createWrappedAdapter(myItemAdapter);       // wrap for expanding
 
         final GeneralItemAnimator animator = new RefactoredDefaultItemAnimator();
 
-        // Change animations are enabled by default since support-v7-recyclerview v22.
-        // Need to disable them when using animation indicator.
         animator.setSupportsChangeAnimations(false);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
@@ -85,10 +74,7 @@ public abstract class ExpandableExampleAbstractController extends BaseController
         mRecyclerView.setItemAnimator(animator);
         mRecyclerView.setHasFixedSize(false);
 
-        // additional decorations
-        //noinspection StatementWithEmptyBody
         if (supportsViewElevation()) {
-            // Lollipop or later has native drop shadow feature. ItemShadowDecorator is not required.
         } else {
             mRecyclerView.addItemDecoration(new ItemShadowDecorator((NinePatchDrawable)
                     Objects.requireNonNull(ContextCompat.getDrawable(view.getContext(), R.drawable.material_shadow_z1))));
@@ -99,9 +85,6 @@ public abstract class ExpandableExampleAbstractController extends BaseController
         mRecyclerViewExpandableItemManager.attachRecyclerView(mRecyclerView);
     }
 
-//    public AbstractExpandableDataProvider getDataProvider() {
-//        return ((ExpandableExampleActivity) getActivity()).getDataProvider();
-//    }
 
     @Override
     protected View inflateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container) {

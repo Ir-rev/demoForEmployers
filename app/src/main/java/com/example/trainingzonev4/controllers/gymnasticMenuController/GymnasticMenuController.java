@@ -98,7 +98,6 @@ public class GymnasticMenuController extends BaseController {
     protected void onRestoreViewState(@NonNull View view, @NonNull Bundle savedViewState) {
         super.onRestoreViewState(view, savedViewState);
 
-        //noinspection WrongConstant
         fab.setVisibility(savedViewState.getInt(KEY_FAB_VISIBILITY));
     }
 

@@ -37,14 +37,12 @@ public class ElasticDragDismissFrameLayout extends FrameLayout implements Nested
 
     }
 
-    // configurable attribs
     private float dragDismissDistance = Float.MAX_VALUE;
     private float dragDismissFraction = -1f;
     private float dragDismissScale = 1f;
     private boolean shouldScale = false;
     private float dragElacticity = 0.8f;
 
-    // state
     private float totalDrag;
     private boolean draggingDown = false;
     private boolean draggingUp = false;
@@ -76,7 +74,6 @@ public class ElasticDragDismissFrameLayout extends FrameLayout implements Nested
 
     @Override
     public void onNestedPreScroll(View target, int dx, int dy, int[] consumed) {
-        // if we're in a drag gesture and the user reverses up the we should take those events
         if (draggingDown && dy > 0 || draggingUp && dy < 0) {
             dragScale(dy);
             consumed[1] = dy;
@@ -93,7 +90,7 @@ public class ElasticDragDismissFrameLayout extends FrameLayout implements Nested
     public void onStopNestedScroll(View child) {
         if (Math.abs(totalDrag) >= dragDismissDistance) {
             dispatchDismissCallback();
-        } else { // settle back to natural position
+        } else {
             animate()
                     .translationY(0f)
                     .scaleX(1f)
@@ -152,9 +149,6 @@ public class ElasticDragDismissFrameLayout extends FrameLayout implements Nested
 
         totalDrag += scroll;
 
-        // track the direction & set the pivot point for scaling
-        // don't double track i.e. if start dragging down and then reverse, keep tracking as
-        // dragging down until they reach the 'natural' position
         if (scroll < 0 && !draggingUp && !draggingDown) {
             draggingDown = true;
             if (shouldScale) setPivotY(getHeight());
@@ -165,16 +159,11 @@ public class ElasticDragDismissFrameLayout extends FrameLayout implements Nested
 
         setPivotX(getWidth() / 2);
 
-        // how far have we dragged relative to the distance to perform a dismiss
-        // (0–1 where 1 = dismiss distance). Decreasing logarithmically as we approach the limit
         float dragFraction = (float) Math.log10(1 + (Math.abs(totalDrag) / dragDismissDistance));
 
-        // calculate the desired translation given the drag fraction
         float dragTo = dragFraction * dragDismissDistance * dragElacticity;
 
         if (draggingUp) {
-            // as we use the absolute magnitude when calculating the drag fraction, need to
-            // re-apply the drag direction
             dragTo *= -1;
         }
         setTranslationY(dragTo);
@@ -185,8 +174,6 @@ public class ElasticDragDismissFrameLayout extends FrameLayout implements Nested
             setScaleY(scale);
         }
 
-        // if we've reversed direction and gone past the settle point then clear the flags to
-        // allow the list to get the scroll events & reset any transforms
         if ((draggingDown && totalDrag >= 0)
                 || (draggingUp && totalDrag <= 0)) {
             totalDrag = dragTo = dragFraction = 0;

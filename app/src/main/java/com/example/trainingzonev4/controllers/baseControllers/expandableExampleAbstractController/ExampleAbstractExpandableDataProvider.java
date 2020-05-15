@@ -12,11 +12,9 @@ public abstract class ExampleAbstractExpandableDataProvider extends AbstractExpa
 
     private LinkedList<Pair<ConcreteGroupData, List<ChildData>>> mData;
 
-    // for undo group item
     private Pair<ConcreteGroupData, List<ChildData>> mLastRemovedGroup;
     private int mLastRemovedGroupPosition = -1;
 
-    // for undo child item
     private ChildData mLastRemovedChild;
     private long mLastRemovedChildParentGroupId = -1;
     private int mLastRemovedChildPosition = -1;
@@ -84,7 +82,7 @@ public abstract class ExampleAbstractExpandableDataProvider extends AbstractExpa
         final ConcreteChildData item = (ConcreteChildData) fromGroup.second.remove(fromChildPosition);
 
         if (toGroupPosition != fromGroupPosition) {
-            // assign a new ID
+
             final long newId = ((ConcreteGroupData) toGroup.first).generateNewChildId();
             item.setChildId(newId);
         }
@@ -144,7 +142,6 @@ public abstract class ExampleAbstractExpandableDataProvider extends AbstractExpa
         Pair<ConcreteGroupData, List<ChildData>> group = null;
         int groupPosition = -1;
 
-        // find the group
         for (int i = 0; i < mData.size(); i++) {
             if (mData.get(i).first.getGroupId() == mLastRemovedChildParentGroupId) {
                 group = mData.get(i);

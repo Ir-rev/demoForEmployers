@@ -43,10 +43,6 @@ public abstract class SwapAndOpenDetailController extends BaseController {
                 .putInt(KEY_IMAGE, imageDrawableRes)
                 .putString(KEY_TITLE, title)
                 .build());
-//        selectDescription(title);
-//        if(getListRows()!=null){
-//            LIST_ROWS=getListRows();
-//        }
 
     }
 

@@ -45,17 +45,11 @@ public abstract class FabAbstractToDialogTransitionChangeHandler extends Transit
         fabParent = (ViewGroup)fab.getParent();
 
         if (!isPush) {
-             /*
-             * Before we transition back we want to remove the fab
-             * in order to add it again for the TransitionManager to be able to detect the change
-             */
+
             fabParent.removeView(fab);
             fab.setVisibility(View.VISIBLE);
 
-             /*
-             * Before we transition back we need to move the dialog's background to the new view
-             * so its fade won't take place over the fab transition
-             */
+
             dialogBackground = from.findViewById(R.id.dialog_background);
             ((ViewGroup)dialogBackground.getParent()).removeView(dialogBackground);
             fabParent.addView(dialogBackground);
@@ -70,11 +64,7 @@ public abstract class FabAbstractToDialogTransitionChangeHandler extends Transit
             fabParent.removeView(fab);
             container.addView(to);
 
-            /*
-             * After the transition is finished we have to add the fab back to the original container.
-             * Because otherwise we will be lost when trying to transition back.
-             * Set it to invisible because we don't want it to jump back after the transition
-             */
+
             AnimUtils.TransitionEndListener endListener = new AnimUtils.TransitionEndListener() {
                 @Override
                 public void onTransitionCompleted(Transition transition) {

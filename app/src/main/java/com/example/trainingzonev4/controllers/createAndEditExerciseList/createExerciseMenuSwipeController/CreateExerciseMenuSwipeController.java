@@ -94,7 +94,7 @@ public  class CreateExerciseMenuSwipeController extends BaseController {
         }
         if (provider.getCount()>0) {
             Toast toast = Toast.makeText(getApplicationContext(),
-                    "Сохранено", Toast.LENGTH_SHORT);
+                    getResources().getString(R.string.saved), Toast.LENGTH_SHORT);
             toast.show();
         }
 

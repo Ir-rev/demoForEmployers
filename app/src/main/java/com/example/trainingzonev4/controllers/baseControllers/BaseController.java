@@ -17,8 +17,7 @@ public abstract class BaseController extends RefWatchingController {
         super(args);
     }
 
-    // Note: This is just a quick demo of how an ActionBar *can* be accessed, not necessarily how it *should*
-    // be accessed. In a production app, this would use Dagger instead.
+
     protected ActionBar getActionBar() {
         ActionBarProvider actionBarProvider = ((ActionBarProvider)getActivity());
         return actionBarProvider != null ? actionBarProvider.getSupportActionBar() : null;

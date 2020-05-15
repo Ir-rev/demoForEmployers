@@ -7,10 +7,6 @@ import com.example.trainingzonev4.controllers.baseControllers.listAbstractSwipeL
 
 public class ExerciseListSwipeController extends AbstractListSwipeController {
 
-//    private Router router;
-//    public ExerciseListSwipeController(Router router){
-//        this.router=router;
-//    }
 
     public ExerciseListSwipeController(){
 
