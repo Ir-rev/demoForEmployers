@@ -25,6 +25,8 @@
     <string name="info_about_book">Все упражнения взяты из книги Уэйд П. Тренировочная зона</string>
     <string name="add_exercise">Добавить упражнение</string>
 
+    <string name="please_create_ur_exercise_list">Создайте свой список с упражнениями</string>
+
     <string name="push_ups">Отжимания</string>
     <string name="squat">Приседания</string>
     <string name="tightening">Подтягивание</string>

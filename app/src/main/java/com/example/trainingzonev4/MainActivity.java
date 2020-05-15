@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity implements ActionBarProvider
 
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
+        System.out.println("text");
+//
         router = Conductor.attachRouter(this, container, savedInstanceState);
         if (!router.hasRootController()) {
             router.setRoot(RouterTransaction.with(new HomeMenuController()));

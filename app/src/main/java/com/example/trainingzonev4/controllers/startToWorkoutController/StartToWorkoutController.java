@@ -144,7 +144,7 @@ public class StartToWorkoutController extends BaseController {
 
                                 } catch (FileNotFoundException e) {
                                     Toast toast = Toast.makeText(getApplicationContext(),
-                                            "Создайте свой список с упражнениями", Toast.LENGTH_SHORT);
+                                            getResources().getString(R.string.please_create_ur_exercise_list), Toast.LENGTH_SHORT);
                                     toast.show();
                                     e.printStackTrace();
                                 } catch (IOException e) {
