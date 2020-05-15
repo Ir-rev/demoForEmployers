@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+
+android {
+
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.example.trainingzonev4"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.bluelinelabs:conductor:3.0.0-rc4'
+    implementation 'com.bluelinelabs:conductor-androidx-transition:3.0.0-rc4'
+    implementation 'com.bluelinelabs:conductor-viewpager:3.0.0-rc4'
+    implementation 'com.bluelinelabs:conductor-rxlifecycle2:3.0.0-rc4'
+    implementation 'com.bluelinelabs:conductor-autodispose:3.0.0-rc4'
+    implementation 'com.bluelinelabs:conductor-archlifecycle:3.0.0-rc4'
+
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:1.0.0'
+    implementation('com.h6ah4i.android.tablayouthelper:tablayouthelper:1.0.0')
+
+    dependencies {
+        debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.2'
+        releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'
+        debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.2'
+    }
+
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+
+    implementation('com.h6ah4i.android.tablayouthelper:tablayouthelper:1.0.0')
+    implementation 'com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    implementation(
+            ['com.android.support:appcompat-v7:29.0.0'],
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.4.1'],
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.4.1'],
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.4.1']
+    )
+    implementation group: 'com.google.code.gson', name: 'gson', version: '1.7.2'
+
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
+
+    implementation 'nl.dionsegijn:konfetti:1.2.0'
+
+    implementation "io.reactivex.rxjava3:rxjava:3.0.3"
+
+}
+
