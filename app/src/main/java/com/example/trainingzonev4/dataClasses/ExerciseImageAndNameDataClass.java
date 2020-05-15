@@ -176,6 +176,19 @@ public class ExerciseImageAndNameDataClass {
             return R.string.squats_level_10_descriptions;
         }
 
+        if (name.equals(resources.getString(R.string.tightening_level_1))) {
+            return R.string.tightening_level_1_descriptions;
+        }
+        if (name.equals(resources.getString(R.string.tightening_level_2))) {
+            return R.string.tightening_level_2_descriptions;
+        }
+        if (name.equals(resources.getString(R.string.tightening_level_3))) {
+            return R.string.tightening_level_3_descriptions;
+        }
+        if (name.equals(resources.getString(R.string.tightening_level_4))) {
+            return R.string.tightening_level_4_descriptions;
+        }
+
 
         return R.string.exercise_level_default_descriptions;
     }
