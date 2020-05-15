@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -142,6 +143,9 @@ public class StartToWorkoutController extends BaseController {
                                                     .popChangeHandler(new VerticalChangeHandler()));
 
                                 } catch (FileNotFoundException e) {
+                                    Toast toast = Toast.makeText(getApplicationContext(),
+                                            "Создайте свой список с упражнениями", Toast.LENGTH_SHORT);
+                                    toast.show();
                                     e.printStackTrace();
                                 } catch (IOException e) {
                                     e.printStackTrace();

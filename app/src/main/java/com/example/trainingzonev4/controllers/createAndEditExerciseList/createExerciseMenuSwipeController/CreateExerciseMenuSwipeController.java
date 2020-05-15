@@ -80,17 +80,8 @@ public  class CreateExerciseMenuSwipeController extends BaseController {
 
                     FileOutputStream fileOutputStream = Objects.requireNonNull(getView()).getContext()
                             .openFileOutput(FILENAME, Context.MODE_PRIVATE);
-
-//                    fileOutputStream.write(jsonOutToFile.toString().replace("\"","\\\"").getBytes());
-
                     fileOutputStream.write(jsonOutToFile.toString().replace("\\\"","").getBytes());
                     fileOutputStream.close();
-
-//                    FileInputStream fileInputStream = getView().getContext().openFileInput("MyExerciseList");
-//                    byte[] bytes = new byte[fileInputStream.available()];
-//                    fileInputStream.read(bytes);
-//                    String text = new String (bytes);
-//                    System.out.println(text);
 
 
                 } catch (IOException e) {

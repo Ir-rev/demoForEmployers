@@ -117,12 +117,6 @@ public class EditExerciseMenuSwipeController extends BaseController {
                     fileOutputStream.write(jsonOutToFile.toString().replace("\\\"","").getBytes());
                     fileOutputStream.close();
 
-//                    FileInputStream fileInputStream = getView().getContext().openFileInput("MyExerciseList");
-//                    byte[] bytes = new byte[fileInputStream.available()];
-//                    fileInputStream.read(bytes);
-//                    String text = new String (bytes);
-//                    System.out.println(text);
-
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -161,7 +155,6 @@ public class EditExerciseMenuSwipeController extends BaseController {
 
         Router childRouter = getChildRouter(container).setPopsLastView(false);
         ExerciseListSwipeController childController = new ExerciseListSwipeController();
-//        ExerciseListSwipeController childController = new ExerciseListSwipeController(getRouter());
 
         childRouter.setRoot(RouterTransaction.with(childController)
                 .pushChangeHandler(new FadeChangeHandler())
