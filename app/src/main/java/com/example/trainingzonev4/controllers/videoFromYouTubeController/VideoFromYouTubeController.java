@@ -5,6 +5,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.LifecycleRegistry;
+import androidx.lifecycle.LifecycleRegistryOwner;
 
 import com.example.trainingzonev4.R;
 import com.example.trainingzonev4.controllers.baseControllers.BaseController;
@@ -18,7 +21,7 @@ import org.jetbrains.annotations.NotNull;
 
 import butterknife.BindView;
 
-public class VideoFromYouTubeController extends BaseController {
+public class VideoFromYouTubeController extends BaseController  {
 
     @BindView(R.id.youtube_player_view)
     YouTubePlayerView youTubePlayerView;
@@ -36,11 +39,13 @@ public class VideoFromYouTubeController extends BaseController {
     @Override
     protected View inflateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container) {
         return inflater.inflate(R.layout.controller_video_from_you_tube, container, false);
+
     }
 
     @Override
     protected void onViewBound(@NonNull View view) {
         super.onViewBound(view);
+
     }
 
     @Override
@@ -48,4 +53,6 @@ public class VideoFromYouTubeController extends BaseController {
         super.onDetach(view);
         youTubePlayerView.release();
     }
+
+
 }
