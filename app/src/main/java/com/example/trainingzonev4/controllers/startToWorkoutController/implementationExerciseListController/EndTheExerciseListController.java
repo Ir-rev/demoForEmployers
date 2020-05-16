@@ -1,6 +1,7 @@
 package com.example.trainingzonev4.controllers.startToWorkoutController.implementationExerciseListController;
 
 import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,7 +58,20 @@ public class EndTheExerciseListController extends BaseController {
     @Override
     protected void onViewBound(@NonNull View view) {
         super.onViewBound(view);
-        Flowable.timer(1000, TimeUnit.MILLISECONDS).subscribe(v->konfettiViewStart()); //fix animation's bag
+
+        /*
+        KonfettiView generate some bug on the tablets. idk what is it
+        will fix it. 16.05.2020
+         */
+        try {
+
+            Flowable.timer(500, TimeUnit.MILLISECONDS).subscribe(v->konfettiViewStart()); //fix animation's bag
+
+        }catch (Throwable e){
+            e.printStackTrace();
+        }
+
+
     }
 
     @OnClick(R.id.button)
