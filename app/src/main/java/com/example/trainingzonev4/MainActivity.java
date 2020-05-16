@@ -9,6 +9,7 @@ import com.bluelinelabs.conductor.Conductor;
 import com.bluelinelabs.conductor.Router;
 import com.bluelinelabs.conductor.RouterTransaction;
 import com.example.trainingzonev4.controllers.homeControllers.HomeMenuController;
+import com.example.trainingzonev4.controllers.videoFromYouTubeController.VideoFromYouTubeController;
 import com.example.trainingzonev4.util.ActionBarProvider;
 
 import butterknife.BindView;
