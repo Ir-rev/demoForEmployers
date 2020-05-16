@@ -44,15 +44,8 @@ public class VideoFromYouTubeController extends BaseController {
     }
 
     @Override
-    public boolean handleBack() {
-        youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
-            @Override
-            public void onReady(@NonNull YouTubePlayer youTubePlayer) {
-                youTubePlayer.pause();
-            }
-        });
-        youTubePlayerView=null;
-        return super.handleBack();
-
+    protected void onDetach(@NonNull View view) {
+        super.onDetach(view);
+        youTubePlayerView.release();
     }
 }

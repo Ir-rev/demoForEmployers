@@ -29,6 +29,14 @@
             android:adjustViewBounds="true"
             app:srcCompat="@drawable/push_ups_lap" />
 
+        <Button
+            android:id="@+id/button_watch_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@color/blue_200"
+            android:text="@string/watch_this_exercise_on_youtube" />
+
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -15,20 +15,13 @@ import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bluelinelabs.conductor.Router;
 import com.bluelinelabs.conductor.RouterTransaction;
-import com.bluelinelabs.conductor.changehandler.FadeChangeHandler;
 import com.bluelinelabs.conductor.changehandler.HorizontalChangeHandler;
 import com.example.trainingzonev4.R;
 import com.example.trainingzonev4.controllers.baseControllers.BaseController;
-import com.example.trainingzonev4.controllers.createAndEditExerciseList.createExerciseMenuSwipeController.exerciseListSwipeController.ExerciseListSwipeController;
-import com.example.trainingzonev4.controllers.createAndEditExerciseList.createExerciseMenuSwipeController.fabInfoAboutButtonController.FabInfoAboutButtonController;
-import com.example.trainingzonev4.controllers.gymnasticMenuController.GymnasticMenuController;
 import com.example.trainingzonev4.controllers.videoFromYouTubeController.VideoFromYouTubeController;
 import com.example.trainingzonev4.dataClasses.ExerciseImageAndNameDataClass;
 import com.example.trainingzonev4.util.BundleBuilder;
-
-import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -179,7 +172,7 @@ public abstract class SwapAndOpenDetailController extends BaseController {
             @BindView(R.id.text_view)
             TextView textView;
             @BindView(R.id.button_watch_video)
-            Button buttonWatch_video;
+            Button buttonWatchVideo;
 
             public DetailViewHolder(View itemView) {
                 super(itemView);
@@ -187,7 +180,7 @@ public abstract class SwapAndOpenDetailController extends BaseController {
 
             void bind(String detail) {
                 textView.setText(detail);
-                buttonWatch_video.setOnClickListener(new View.OnClickListener() {
+                buttonWatchVideo.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         getRouter().pushController(
