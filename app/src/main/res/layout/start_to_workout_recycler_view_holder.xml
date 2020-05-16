@@ -15,6 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="fitCenter"
+            android:layout_gravity="center"
             android:adjustViewBounds="true"
             app:srcCompat="@drawable/fresh_blood" />
 
@@ -23,9 +24,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_margin="@dimen/list_left"
+            android:layout_marginBottom="0dp"
+            android:background="@color/wall_white_80_percent"
+            android:gravity="center"
             android:text="@string/workout_fresh_blood"
-            android:textColor="@color/red_300"
+            android:textColor="@color/red_400"
             android:textSize="40sp" />
 
     </FrameLayout>
