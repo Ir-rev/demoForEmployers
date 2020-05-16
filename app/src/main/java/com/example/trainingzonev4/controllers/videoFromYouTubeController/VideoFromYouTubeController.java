@@ -8,9 +8,13 @@ import androidx.annotation.NonNull;
 
 import com.example.trainingzonev4.R;
 import com.example.trainingzonev4.controllers.baseControllers.BaseController;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
+
+import org.jetbrains.annotations.NotNull;
 
 import butterknife.BindView;
 
@@ -19,10 +23,11 @@ public class VideoFromYouTubeController extends BaseController {
     @BindView(R.id.youtube_player_view)
     YouTubePlayerView youTubePlayerView;
 
-    private String idVideo;
 
     public VideoFromYouTubeController() {
     }
+
+    private String idVideo;
 
     public VideoFromYouTubeController(String idVideo) {
         this.idVideo = idVideo;
@@ -36,17 +41,18 @@ public class VideoFromYouTubeController extends BaseController {
     @Override
     protected void onViewBound(@NonNull View view) {
         super.onViewBound(view);
+    }
 
-        if (idVideo == null) {
-            idVideo = "6KFo6h7TEs4";
-        }
-
+    @Override
+    public boolean handleBack() {
         youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
             @Override
             public void onReady(@NonNull YouTubePlayer youTubePlayer) {
-                String videoId = idVideo;
-                youTubePlayer.loadVideo(videoId, 0);
+                youTubePlayer.pause();
             }
         });
+        youTubePlayerView=null;
+        return super.handleBack();
+
     }
 }

@@ -215,5 +215,13 @@ public class ExerciseImageAndNameDataClass {
         return getIntDescriptionsByName(resources.getString(name), resources);
     }
 
+    public static int getIntVideoByName(int name, Resources resources){
+        return getIntVideoByName(resources.getString(name), resources);
+    }
+    public static int getIntVideoByName(String name, Resources resources){
+        name = name.replaceAll("\"", "");
+
+        return R.string.tightening_level_1_video;
+    }
 
 }
