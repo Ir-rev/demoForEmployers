@@ -1,6 +1,5 @@
 package com.example.trainingzonev4.transform.swapAndOpenTransform;
 
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -117,7 +116,7 @@ public abstract class SwapAndOpenDetailController extends BaseController {
             if (viewType == VIEW_TYPE_HEADER) {
                 return new HeaderViewHolder(inflater.inflate(R.layout.row_city_header, parent, false));
             } else {
-                return new DetailViewHolder(inflater.inflate(R.layout.row_city_detail, parent, false));
+                return new DetailViewHolder(inflater.inflate(R.layout.row_exercise_detail, parent, false));
             }
         }
 
