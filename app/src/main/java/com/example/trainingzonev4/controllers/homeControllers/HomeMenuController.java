@@ -142,7 +142,7 @@ public class HomeMenuController extends BaseController {
         SpannableString details = new SpannableString(Objects.requireNonNull(getResources()).getString(R.string.send_questions));
         details.setSpan(new AbsoluteSizeSpan(16, true), 0, details.length(), Spanned.SPAN_INCLUSIVE_INCLUSIVE);
 
-        final String url = Objects.requireNonNull(getResources()).getString(R.string.my_vk_url);
+        final String url = Objects.requireNonNull(getResources()).getString(R.string.my_mail_url);
         SpannableString link = new SpannableString(url);
         link.setSpan(new URLSpan(url) {
             @Override
