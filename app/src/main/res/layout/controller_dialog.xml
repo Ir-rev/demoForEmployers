@@ -58,6 +58,7 @@
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
             android:minWidth="64dp"
+            android:textColor="@color/pink_button"
             android:text="@android:string/ok"
             />
 

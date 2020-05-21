@@ -18,6 +18,12 @@
     <dimen name="list_right">6dp</dimen>
     <dimen name="list_top">2dp</dimen>
 
+    <dimen name="row_left">10dp</dimen>
+    <dimen name="row_right">10dp</dimen>
+    <dimen name="row_top">8dp</dimen>
+
+
+
     <!-- Default screen margins, per the Android Design guidelines. -->
 
     <dimen name="list_item_elevation">2dp</dimen>

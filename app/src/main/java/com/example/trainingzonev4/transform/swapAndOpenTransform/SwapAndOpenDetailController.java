@@ -63,7 +63,7 @@ public abstract class SwapAndOpenDetailController extends BaseController {
     @NonNull
     @Override
     protected View inflateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container) {
-        return inflater.inflate(R.layout.controller_city_detail, container, false);
+        return inflater.inflate(R.layout.controller_recycler_detail, container, false);
     }
 
     @Override

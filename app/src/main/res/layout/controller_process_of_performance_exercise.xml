@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="9"
         android:scaleType="fitCenter"
-        android:background="@color/blue_400"
+        android:background="@color/pink_button"
 
         app:srcCompat="@drawable/accept_png" />
 

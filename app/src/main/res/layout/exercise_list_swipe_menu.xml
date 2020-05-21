@@ -15,6 +15,7 @@
         android:layout_marginLeft="@dimen/list_left"
         android:layout_marginRight="@dimen/list_right"
         android:layout_weight="15"
+        android:background="@color/pink_button"
         android:text="@string/add_exercise" />
 
 

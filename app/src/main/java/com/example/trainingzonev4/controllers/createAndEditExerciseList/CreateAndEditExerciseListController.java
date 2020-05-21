@@ -136,7 +136,7 @@ public class CreateAndEditExerciseListController extends BaseController {
         @NonNull
         @Override
         public CreateAndEditExerciseListAdapter.CreateAndEditExerciseListHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.row_create_and_edit_exercise_list,parent,false);
+            View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.row_home,parent,false);
             return new CreateAndEditExerciseListAdapter.CreateAndEditExerciseListHolder(view);
         }
 
