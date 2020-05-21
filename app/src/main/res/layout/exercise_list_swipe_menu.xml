@@ -12,6 +12,8 @@
         android:id="@+id/button_add_exercise"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/list_left"
+        android:layout_marginTop="@dimen/list_left"
         android:layout_marginLeft="@dimen/list_left"
         android:layout_marginRight="@dimen/list_right"
         android:layout_weight="15"

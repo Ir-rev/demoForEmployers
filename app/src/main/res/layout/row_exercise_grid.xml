@@ -12,7 +12,7 @@
     android:layout_margin="1dp"
     android:layout_marginLeft="1dp"
     android:layout_marginRight="1dp"
-    android:background="@color/blue_100"
+    android:background="@color/pink_button"
     >
 
     <ImageView
