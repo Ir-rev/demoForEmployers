@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bluelinelabs.conductor.RouterTransaction;
+import com.bluelinelabs.conductor.changehandler.HorizontalChangeHandler;
 import com.bluelinelabs.conductor.changehandler.VerticalChangeHandler;
 import com.example.trainingzonev4.R;
 import com.example.trainingzonev4.controllers.baseControllers.BaseController;
@@ -153,16 +154,16 @@ public class CreateAndEditExerciseListController extends BaseController {
 
                             getRouter().pushController(
                                     RouterTransaction.with(new EditExerciseMenuSwipeController())
-                                            .pushChangeHandler(new VerticalChangeHandler())
-                                            .popChangeHandler(new VerticalChangeHandler()));
+                                            .pushChangeHandler(new HorizontalChangeHandler())
+                                            .popChangeHandler(new HorizontalChangeHandler()));
 
 
                             break;
                         case CREATE:
                             getRouter().pushController(
                                     RouterTransaction.with(new CreateExerciseMenuSwipeController())
-                                            .pushChangeHandler(new VerticalChangeHandler())
-                                            .popChangeHandler(new VerticalChangeHandler()));
+                                            .pushChangeHandler(new HorizontalChangeHandler())
+                                            .popChangeHandler(new HorizontalChangeHandler()));
                             break;
                     }
                 }

@@ -32,6 +32,7 @@
     <color name="grey_400">#78909C</color>
     <color name="red_400">#C43333</color>
     <color name="pink_button">#ff96c6</color>
+    <color name="pink_button_10">#F3EDF0</color>
 
 
     <color name="dark_icon">#99000000</color>
@@ -49,10 +50,10 @@
     <color name="wall_white_80_percent">#90ffffff</color>
 
 
-    <color name="bg_group_item_normal_state">#ffddffdd</color>
-    <color name="bg_group_item_normal_pressed_state">#ff99cc99</color>
-    <color name="bg_group_item_expanded_state">#ff88dd88</color>
-    <color name="bg_group_item_expanded_pressed_state">#ff99cc99</color>
+    <color name="bg_group_item_normal_state">#ff96c6</color>
+    <color name="bg_group_item_normal_pressed_state">#CC99BF</color>
+    <color name="bg_group_item_expanded_state">#DD88D7</color>
+    <color name="bg_group_item_expanded_pressed_state">#C999CC</color>
     <color name="bg_group_item_dragging_state">#ffeeccff</color>
     <color name="bg_group_item_dragging_active_state">#ffee99ff</color>
     <color name="bg_group_item_swiping_state">#ffddccff</color>

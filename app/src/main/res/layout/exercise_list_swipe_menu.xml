@@ -4,8 +4,7 @@
     android:id="@+id/controller_container_verticatl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white">
+    android:orientation="vertical">
 
 
     <Button
