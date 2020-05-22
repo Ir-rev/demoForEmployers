@@ -1,5 +1,7 @@
 # demoForEmployers
 
+23.05.2020 the start adding database(realm).small garbage and illogical solutions will be here
+
 this demo include following libraries
 
 -jakewharton:butterknife https://github.com/JakeWharton/butterknife
