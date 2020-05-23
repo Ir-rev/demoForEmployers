@@ -1,6 +1,6 @@
 # demoForEmployers
 **/
-23.05.2020 the start adding database(realm).small garbage and illogical solutions will be here
+24.05.2020  the installing the database ended. possibly small errors =)
 /**
 
 this demo include following libraries
@@ -18,6 +18,9 @@ this demo include following libraries
 -rxjava https://github.com/ReactiveX
 
 -dionsegijn:konfetti https://github.com/DanielMartinus
+
+-realm https://github.com/realm/realm-java
+
 
 minSdkVersion 24
 targetSdkVersion 29
