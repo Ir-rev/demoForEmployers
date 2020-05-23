@@ -1,10 +1,8 @@
 package com.example.trainingzonev4.controllers.gymnasticMenuController.squat;
 
-import android.content.res.Resources;
 import android.os.Bundle;
 
-import com.bluelinelabs.conductor.Router;
-import com.example.trainingzonev4.dataClasses.ExerciseImageAndNameDataClass;
+import com.example.trainingzonev4.realm.ExerciseImageAndNameDataClass;
 import com.example.trainingzonev4.transform.swapAndOpenTransform.SwapAndOpenDetailController;
 
 public class SquatDetailMenuController extends SwapAndOpenDetailController {
@@ -23,7 +21,7 @@ public class SquatDetailMenuController extends SwapAndOpenDetailController {
     @Override
     protected void selectDescription(String title) {
 
-        LIST_ROWS = new String[]{getResources().getString(ExerciseImageAndNameDataClass.getIntDescriptionsByName(title,getResources()))};
+        LIST_ROWS = new String[]{(ExerciseImageAndNameDataClass.getIntDescriptionsByName(title,getResources()))};
     }
 
     @Override

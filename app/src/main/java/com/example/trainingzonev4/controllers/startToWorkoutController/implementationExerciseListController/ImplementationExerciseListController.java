@@ -1,6 +1,5 @@
 package com.example.trainingzonev4.controllers.startToWorkoutController.implementationExerciseListController;
 
-import android.annotation.SuppressLint;
 import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,32 +12,21 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bluelinelabs.conductor.Router;
 import com.bluelinelabs.conductor.RouterTransaction;
 import com.bluelinelabs.conductor.changehandler.HorizontalChangeHandler;
 import com.bluelinelabs.conductor.changehandler.VerticalChangeHandler;
 import com.example.trainingzonev4.R;
 import com.example.trainingzonev4.controllers.baseControllers.BaseController;
-import com.example.trainingzonev4.controllers.baseControllers.dragDismissController.DragDismissController;
-import com.example.trainingzonev4.controllers.startToWorkoutController.StartToWorkoutController;
-import com.example.trainingzonev4.dataClasses.ExerciseImageAndNameDataClass;
+import com.example.trainingzonev4.realm.ExerciseImageAndNameDataClass;
 import com.example.trainingzonev4.transform.scaleFadeChangeHandler.ScaleFadeChangeHandler;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.JSONStringer;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Objects;
 

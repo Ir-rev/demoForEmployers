@@ -11,11 +11,10 @@ import androidx.annotation.NonNull;
 
 import com.bluelinelabs.conductor.RouterTransaction;
 import com.bluelinelabs.conductor.changehandler.HorizontalChangeHandler;
-import com.example.trainingzonev4.BuildConfig;
 import com.example.trainingzonev4.R;
 import com.example.trainingzonev4.controllers.baseControllers.dragDismissController.DragDismissController;
 import com.example.trainingzonev4.controllers.videoFromYouTubeController.VideoFromYouTubeController;
-import com.example.trainingzonev4.dataClasses.ExerciseImageAndNameDataClass;
+import com.example.trainingzonev4.realm.ExerciseImageAndNameDataClass;
 
 import butterknife.BindView;
 
@@ -51,7 +50,7 @@ public class ExerciseDescriptionsInWorkoutControllers extends DragDismissControl
         String name=this.name.replaceAll("\"","");
         textView.setText(name);
         imageView.setImageDrawable(getResources().getDrawable(ExerciseImageAndNameDataClass.getIntImageByName(name,getResources())));
-        tvDescriptions.setText(getResources().getString(ExerciseImageAndNameDataClass.getIntDescriptionsByName(name,getResources())));
+        tvDescriptions.setText((ExerciseImageAndNameDataClass.getIntDescriptionsByName(name,getResources())));
         buttonWatchVideo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

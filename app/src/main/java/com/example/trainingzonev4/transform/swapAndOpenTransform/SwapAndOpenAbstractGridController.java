@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.trainingzonev4.R;
 import com.example.trainingzonev4.controllers.baseControllers.BaseController;
-import com.example.trainingzonev4.dataClasses.ExerciseImageAndNameDataClass;
+import com.example.trainingzonev4.realm.ExerciseImageAndNameDataClass;
 import com.example.trainingzonev4.util.BundleBuilder;
 
 import butterknife.BindView;

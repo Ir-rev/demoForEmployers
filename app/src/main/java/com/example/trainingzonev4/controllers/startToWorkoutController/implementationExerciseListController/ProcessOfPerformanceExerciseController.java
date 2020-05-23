@@ -10,17 +10,13 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.bluelinelabs.conductor.Router;
 import com.bluelinelabs.conductor.RouterTransaction;
 import com.bluelinelabs.conductor.changehandler.HorizontalChangeHandler;
-import com.bluelinelabs.conductor.changehandler.VerticalChangeHandler;
 import com.example.trainingzonev4.R;
 import com.example.trainingzonev4.controllers.baseControllers.BaseController;
-import com.example.trainingzonev4.dataClasses.ExerciseImageAndNameDataClass;
-import com.example.trainingzonev4.transform.scaleFadeChangeHandler.ScaleFadeChangeHandler;
+import com.example.trainingzonev4.realm.ExerciseImageAndNameDataClass;
 
 import java.util.LinkedList;
-import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.OnClick;
