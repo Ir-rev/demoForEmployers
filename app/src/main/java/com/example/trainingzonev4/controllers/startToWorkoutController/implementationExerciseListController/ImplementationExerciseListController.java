@@ -17,7 +17,7 @@ import com.bluelinelabs.conductor.changehandler.HorizontalChangeHandler;
 import com.bluelinelabs.conductor.changehandler.VerticalChangeHandler;
 import com.example.trainingzonev4.R;
 import com.example.trainingzonev4.controllers.baseControllers.BaseController;
-import com.example.trainingzonev4.realm.ExerciseImageAndNameDataClass;
+import com.example.trainingzonev4.realmDatabase.ExerciseImageAndNameDataClass;
 import com.example.trainingzonev4.transform.scaleFadeChangeHandler.ScaleFadeChangeHandler;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;

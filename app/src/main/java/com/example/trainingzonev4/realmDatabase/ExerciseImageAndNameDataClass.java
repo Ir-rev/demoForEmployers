@@ -1,12 +1,10 @@
-package com.example.trainingzonev4.realm;
+package com.example.trainingzonev4.realmDatabase;
 
 import android.content.res.Resources;
 
 import com.example.trainingzonev4.R;
-import com.example.trainingzonev4.realm.ExerciseDataRealm;
 
 import io.reactivex.Flowable;
-import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.realm.Realm;
 

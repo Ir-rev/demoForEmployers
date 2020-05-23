@@ -15,7 +15,7 @@ import com.bluelinelabs.conductor.RouterTransaction;
 import com.bluelinelabs.conductor.changehandler.FadeChangeHandler;
 import com.example.trainingzonev4.R;
 import com.example.trainingzonev4.controllers.gymnasticMenuController.pushUps.PushUpsDetailMenuController;
-import com.example.trainingzonev4.realm.ExerciseImageAndNameDataClass;
+import com.example.trainingzonev4.realmDatabase.ExerciseImageAndNameDataClass;
 import com.example.trainingzonev4.transform.fabTransform.TransitionChangeHandlerCompat;
 import com.example.trainingzonev4.transform.swapAndOpenTransform.SwapAndOpenAbstractGridController;
 import com.example.trainingzonev4.transform.swapAndOpenTransform.SwapAndOpenGridSharedElementTransitionChangeHandler;

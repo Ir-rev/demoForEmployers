@@ -14,7 +14,7 @@ import com.bluelinelabs.conductor.RouterTransaction;
 import com.bluelinelabs.conductor.changehandler.HorizontalChangeHandler;
 import com.example.trainingzonev4.R;
 import com.example.trainingzonev4.controllers.baseControllers.BaseController;
-import com.example.trainingzonev4.realm.ExerciseImageAndNameDataClass;
+import com.example.trainingzonev4.realmDatabase.ExerciseImageAndNameDataClass;
 
 import java.util.LinkedList;
 

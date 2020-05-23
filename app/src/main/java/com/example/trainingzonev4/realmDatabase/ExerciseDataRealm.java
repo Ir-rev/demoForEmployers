@@ -1,4 +1,4 @@
-package com.example.trainingzonev4.realm;
+package com.example.trainingzonev4.realmDatabase;
 
 import io.realm.RealmObject;
 

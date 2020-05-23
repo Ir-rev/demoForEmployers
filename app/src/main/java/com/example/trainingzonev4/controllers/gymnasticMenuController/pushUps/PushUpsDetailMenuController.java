@@ -3,7 +3,7 @@ package com.example.trainingzonev4.controllers.gymnasticMenuController.pushUps;
 import android.content.res.Resources;
 import android.os.Bundle;
 
-import com.example.trainingzonev4.realm.ExerciseImageAndNameDataClass;
+import com.example.trainingzonev4.realmDatabase.ExerciseImageAndNameDataClass;
 import com.example.trainingzonev4.transform.swapAndOpenTransform.SwapAndOpenDetailController;
 
 public class PushUpsDetailMenuController extends SwapAndOpenDetailController {

@@ -2,7 +2,7 @@ package com.example.trainingzonev4.controllers.gymnasticMenuController.squat;
 
 import android.os.Bundle;
 
-import com.example.trainingzonev4.realm.ExerciseImageAndNameDataClass;
+import com.example.trainingzonev4.realmDatabase.ExerciseImageAndNameDataClass;
 import com.example.trainingzonev4.transform.swapAndOpenTransform.SwapAndOpenDetailController;
 
 public class SquatDetailMenuController extends SwapAndOpenDetailController {

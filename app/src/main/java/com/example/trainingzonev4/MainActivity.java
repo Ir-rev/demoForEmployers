@@ -9,18 +9,11 @@ import com.bluelinelabs.conductor.Conductor;
 import com.bluelinelabs.conductor.Router;
 import com.bluelinelabs.conductor.RouterTransaction;
 import com.example.trainingzonev4.controllers.homeControllers.HomeMenuController;
-import com.example.trainingzonev4.realm.ExerciseDataRealm;
-import com.example.trainingzonev4.realm.RealmDatabase;
+import com.example.trainingzonev4.realmDatabase.RealmDatabase;
 import com.example.trainingzonev4.util.ActionBarProvider;
-
-import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import io.reactivex.Flowable;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
-import io.realm.Realm;
 
 public class MainActivity extends AppCompatActivity implements ActionBarProvider {
 

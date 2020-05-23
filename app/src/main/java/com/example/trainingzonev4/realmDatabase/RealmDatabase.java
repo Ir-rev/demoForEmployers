@@ -1,14 +1,9 @@
-package com.example.trainingzonev4.realm;
+package com.example.trainingzonev4.realmDatabase;
 
-import android.app.Application;
 import android.content.Context;
 import android.content.res.Resources;
 
 import com.example.trainingzonev4.R;
-
-import java.util.Map;
-import java.util.Random;
-import java.util.TreeMap;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
