@@ -36,6 +36,7 @@ import com.example.trainingzonev4.controllers.baseControllers.BaseController;
 import com.example.trainingzonev4.controllers.baseControllers.abstractFabToDialog.util.DialogFromFabController;
 import com.example.trainingzonev4.controllers.dialogsFromFabControllers.fabFromHomeMenu.FabHomeToDialogTransitionChangeHandler;
 import com.example.trainingzonev4.controllers.gymnasticMenuController.GymnasticMenuController;
+import com.example.trainingzonev4.controllers.instagramFood.InstagramFoodMenuController;
 import com.example.trainingzonev4.controllers.startToWorkoutController.StartToWorkoutController;
 import com.example.trainingzonev4.transform.fabTransform.TransitionChangeHandlerCompat;
 
@@ -52,6 +53,8 @@ public class HomeMenuController extends BaseController {
         START_TO_WORKOUT(R.string.start_to_workout, R.color.red_300),
         GYMNASTIC_LIST(R.string.exercise_description, R.color.red_300),
         EXERCISE_LIST_CREATE(R.string.my_exercise_list, R.color.red_300),
+        INSTAGRAM_FOOD(R.string.instagram_food, R.color.red_300),
+
         ;
 
         int title;
@@ -189,7 +192,16 @@ public class HomeMenuController extends BaseController {
                         RouterTransaction.with(new CreateAndEditExerciseListController())
                                 .pushChangeHandler(new HorizontalChangeHandler())
                                 .popChangeHandler(new HorizontalChangeHandler()));
+
                 break;
+            case INSTAGRAM_FOOD:
+                getRouter().pushController(
+                        RouterTransaction.with(new InstagramFoodMenuController())
+                                .pushChangeHandler(new HorizontalChangeHandler())
+                                .popChangeHandler(new HorizontalChangeHandler()));
+
+                break;
+
         }
     }
 

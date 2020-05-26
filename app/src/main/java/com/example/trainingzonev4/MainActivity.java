@@ -3,17 +3,23 @@ package com.example.trainingzonev4;
 import android.os.Bundle;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bluelinelabs.conductor.Conductor;
 import com.bluelinelabs.conductor.Router;
 import com.bluelinelabs.conductor.RouterTransaction;
 import com.example.trainingzonev4.controllers.homeControllers.HomeMenuController;
+import com.example.trainingzonev4.network.NetworkService;
+import com.example.trainingzonev4.network.dataClasses.InstagramDataPOJO;
 import com.example.trainingzonev4.realmDatabase.RealmDatabase;
 import com.example.trainingzonev4.util.ActionBarProvider;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity implements ActionBarProvider {
 
@@ -36,17 +42,6 @@ public class MainActivity extends AppCompatActivity implements ActionBarProvider
         if (!router.hasRootController()) {
             router.setRoot(RouterTransaction.with(new HomeMenuController()));
         }
-//
-//        Realm realm = Realm.getDefaultInstance();
-////
-//        String text;
-//        Disposable disposable= realm.where(ExerciseDataRealm.class).findAll().asFlowable()
-//                .flatMap(Flowable::fromIterable)
-//                .filter(v->v.getName().equals(getResources().getString(R.string.push_ups_level_2)))
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe(value->text=value);
-//
-//
 
     }
 

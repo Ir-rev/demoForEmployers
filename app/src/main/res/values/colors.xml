@@ -48,6 +48,7 @@
     <color name="bg_swipe_item_dismiss">#ff2f8b2a</color>
     <color name="swipe_item_delete">#C21313</color>
     <color name="wall_white_80_percent">#90ffffff</color>
+    <color name="wall_white_90_percent">#CCFFFFFF</color>
 
 
     <color name="bg_group_item_normal_state">#ff96c6</color>

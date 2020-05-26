@@ -3,6 +3,8 @@
 
     <!-- Transitions -->
     <string name="fab_dialog_transition_name">transition.fab</string>
+    <string name="instagram_token">IGQVJYTnZAmUG8yLWFhS2wzcGtvbHJFUjBPMWpKbHlTcUxzZAWM5NF9UdFotQ2tSa0ZA1YjItRUx1cWRTOW81cFptbTNiakdKc0NKb3YxQjFZAbWNRdlh1MXVJY0JsU3NPamxraWlXRlR3</string>
+    <string name="instagram_field_search">id,media_type,caption,media_url</string>
 
 
     <!-- Home Controller -->
@@ -38,6 +40,7 @@
 
     <string name="exercise_description">Описание упражнений</string>
     <string name="my_exercise_list">Мои списки упражнений</string>
+    <string name="instagram_food">Полезная еда</string>
     <string name="create_exercise_list">Новый список</string>
     <string name="start_to_workout">Начать тренировку</string>
     <string name="edit_exercise_list">Изменить</string>
