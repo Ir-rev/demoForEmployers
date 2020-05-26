@@ -21,6 +21,9 @@ this demo include following libraries
 
 -realm https://github.com/realm/realm-java
 
+-retrofit2 https://github.com/square/retrofit
+
+-picasso https://github.com/square/picasso
 
 minSdkVersion 24
 targetSdkVersion 29
