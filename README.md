@@ -1,8 +1,12 @@
 # demoForEmployers
 **/
+
 23.05.2020 the realm database is included. some bugs with description is possible
+
 26.05.2020 the starting is adding API instagram
+
 27.05.2020 Some tablets have animation issues. will fix
+
 /**
 
 this demo include following libraries
