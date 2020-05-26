@@ -259,6 +259,9 @@ public class HomeMenuController extends BaseController {
                     case EXERCISE_LIST_CREATE:
                         imgDot.setImageDrawable(Objects.requireNonNull(getResources()).getDrawable(R.drawable.ic_plus_vector_icon));
                         break;
+                    case INSTAGRAM_FOOD:
+                        imgDot.setImageDrawable(Objects.requireNonNull(getResources()).getDrawable(R.drawable.ic_cooking));
+                        break;
                     default:
                         imgDot.getDrawable().setColorFilter(ContextCompat.getColor(getActivity(), item.color), Mode.SRC_ATOP);
                         break;

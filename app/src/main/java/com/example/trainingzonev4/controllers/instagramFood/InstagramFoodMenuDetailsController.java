@@ -4,7 +4,6 @@ import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,9 +11,6 @@ import androidx.annotation.NonNull;
 
 import com.example.trainingzonev4.R;
 import com.example.trainingzonev4.controllers.baseControllers.BaseController;
-import com.example.trainingzonev4.controllers.baseControllers.dragDismissController.DragDismissController;
-
-import java.util.prefs.BackingStoreException;
 
 import butterknife.BindView;
 

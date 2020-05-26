@@ -1,6 +1,7 @@
 package com.example.trainingzonev4.controllers.instagramFood;
 
 import android.content.res.Resources;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bluelinelabs.conductor.Router;
 import com.bluelinelabs.conductor.RouterTransaction;
 import com.bluelinelabs.conductor.changehandler.HorizontalChangeHandler;
 import com.example.trainingzonev4.R;
@@ -24,10 +26,6 @@ import java.util.List;
 import java.util.Objects;
 
 import butterknife.BindView;
-import io.reactivex.Completable;
-import io.reactivex.Flowable;
-import io.reactivex.internal.observers.BlockingObserver;
-import io.reactivex.rxjava3.core.Observable;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -39,6 +37,12 @@ public class InstagramFoodMenuController extends BaseController {
 
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+    }
 
     @Override
     protected View inflateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container) {
@@ -105,6 +109,8 @@ public class InstagramFoodMenuController extends BaseController {
 
         }
 
+
+
         @NonNull
         @Override
         public InstagramFoodMenuListHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -118,13 +124,21 @@ public class InstagramFoodMenuController extends BaseController {
             holder.textViewName.setText(foodList.get(position).getCaption());
             Picasso.with(getView().getContext())
                     .load(foodList.get(position).getMediaUrl())
+                    .placeholder(R.drawable.blur)
                     .error(R.drawable.error_download)
                     .into(holder.imageView);
 
             holder.containerForItems.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    getRouter().pushController(
+
+                    ViewGroup controllerContainerSelectExercise = Objects.requireNonNull(getActivity())
+                            .findViewById(R.id.controller_container);
+
+                    Router childRouterOnClick = getChildRouter(controllerContainerSelectExercise)
+                            .setPopsLastView(true);
+
+                    childRouterOnClick.pushController(
                             RouterTransaction.with(new InstagramFoodMenuDetailsController(foodList.get(position).getCaption(),
                                     holder.imageView.getDrawable()))
                                     .pushChangeHandler(new HorizontalChangeHandler())
