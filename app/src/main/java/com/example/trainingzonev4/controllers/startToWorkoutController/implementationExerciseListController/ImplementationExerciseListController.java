@@ -68,7 +68,7 @@ public class ImplementationExerciseListController extends BaseController {
     Button buttonStart;
 
     private LinkedList<ExerciseListData> exerciseArrayList;
-    private String workoutListTAG;
+    private String workoutListTAG="empty";
 
     public LinkedList<ExerciseListData> getExerciseArrayList() {
         return exerciseArrayList;
@@ -95,6 +95,7 @@ public class ImplementationExerciseListController extends BaseController {
     @Override
     protected void onViewBound(@NonNull View view) {
         super.onViewBound(view);
+
         JsonParser parser = new JsonParser();
         JsonObject jsonFromStringTAG = new JsonObject();
         exerciseArrayList = new LinkedList<>();
@@ -126,7 +127,6 @@ public class ImplementationExerciseListController extends BaseController {
             }
 
         }
-
 
         if (exerciseArrayList != null) {
             recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));

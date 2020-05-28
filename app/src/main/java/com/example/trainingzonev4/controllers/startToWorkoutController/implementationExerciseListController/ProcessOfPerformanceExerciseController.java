@@ -52,6 +52,9 @@ public class ProcessOfPerformanceExerciseController extends BaseController {
     @Override
     protected void onViewBound(@NonNull View view) {
         super.onViewBound(view);
+        if(exerciseArrayList==null){
+            return;
+        }
 
         textViewName.setText(exerciseArrayList.get(index).name+" x "+exerciseArrayList.get(index).times);
         imageViewExercise.setImageDrawable(getResources().getDrawable

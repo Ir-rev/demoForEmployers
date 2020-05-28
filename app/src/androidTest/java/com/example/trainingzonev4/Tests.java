@@ -12,9 +12,23 @@ import com.bluelinelabs.conductor.Router;
 import com.bluelinelabs.conductor.RouterTransaction;
 import com.example.trainingzonev4.controllers.baseControllers.BaseController;
 import com.example.trainingzonev4.controllers.createAndEditExerciseList.CreateAndEditExerciseListController;
+import com.example.trainingzonev4.controllers.createAndEditExerciseList.createExerciseMenuSwipeController.CreateExerciseMenuSwipeController;
+import com.example.trainingzonev4.controllers.createAndEditExerciseList.createExerciseMenuSwipeController.chooseTimesExerciseController.ChooseTimesExerciseController;
+import com.example.trainingzonev4.controllers.createAndEditExerciseList.createExerciseMenuSwipeController.editExerciseMenuSwipeController.EditExerciseMenuSwipeController;
+import com.example.trainingzonev4.controllers.createAndEditExerciseList.createExerciseMenuSwipeController.exerciseListSwipeController.ExerciseListSwipeController;
+import com.example.trainingzonev4.controllers.createAndEditExerciseList.createExerciseMenuSwipeController.exerciseSelectionController.ExerciseSelectionController;
+import com.example.trainingzonev4.controllers.createAndEditExerciseList.createExerciseMenuSwipeController.fabInfoAboutButtonController.FabInfoAboutButtonController;
 import com.example.trainingzonev4.controllers.gymnasticMenuController.GymnasticMenuController;
+import com.example.trainingzonev4.controllers.gymnasticMenuController.pushUps.PushUpsDetailMenuController;
+import com.example.trainingzonev4.controllers.gymnasticMenuController.pushUps.PushUpsGridController;
+import com.example.trainingzonev4.controllers.homeControllers.HomeMenuController;
+import com.example.trainingzonev4.controllers.instagramFood.InstagramFoodMenuController;
+import com.example.trainingzonev4.controllers.instagramFood.InstagramFoodMenuDetailsController;
 import com.example.trainingzonev4.controllers.startToWorkoutController.StartToWorkoutController;
+import com.example.trainingzonev4.controllers.startToWorkoutController.implementationExerciseListController.ExerciseDescriptionsInWorkoutControllers;
 import com.example.trainingzonev4.controllers.startToWorkoutController.implementationExerciseListController.ImplementationExerciseListController;
+import com.example.trainingzonev4.controllers.startToWorkoutController.implementationExerciseListController.ProcessOfPerformanceExerciseController;
+import com.example.trainingzonev4.controllers.videoFromYouTubeController.VideoFromYouTubeController;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -59,12 +73,49 @@ public class Tests {
     }
 
     @Test
-    public void testControllers() {
+    public void testAllEmptyControllers(){
+
+        testEmptyController(new HomeMenuController());
+        testEmptyController(new StartToWorkoutController());
+        testEmptyController(new ImplementationExerciseListController());
+        testEmptyController(new CreateAndEditExerciseListController());
+        testEmptyController(new ChooseTimesExerciseController());
+        testEmptyController(new EditExerciseMenuSwipeController());
+        testEmptyController(new ExerciseListSwipeController());
+        testEmptyController(new ExerciseSelectionController());
+        testEmptyController(new FabInfoAboutButtonController());
+        testEmptyController(new CreateExerciseMenuSwipeController());
+        testEmptyController(new GymnasticMenuController());
+        testEmptyController(new InstagramFoodMenuController());
+        testEmptyController(new InstagramFoodMenuDetailsController());
+        testEmptyController(new ProcessOfPerformanceExerciseController());
+        testEmptyController(new ExerciseDescriptionsInWorkoutControllers());
+        testEmptyController(new VideoFromYouTubeController());
+
+    }
+
+    public void testEmptyController(BaseController controller){
         Resources resources = testRule.getActivity().getResources();
+        Activity activity = testRule.getActivity();
+
+        activity.runOnUiThread(() -> {
+            router = testRule.getActivity().getRouter();
+            router.setRoot(RouterTransaction.with(controller));
+        });
+
+        testRule.relaunchActivity();
+
+    }
+
+    @Test
+    public void testRecyclerViewInControllers() {
+        Resources resources = testRule.getActivity().getResources();
+
 
         testRecyclerViewInControllers(new StartToWorkoutController());
         testRecyclerViewInControllers(new CreateAndEditExerciseListController());
         testRecyclerViewInControllers(new ImplementationExerciseListController(resources.getString(R.string.workout_fresh_blood)));
+
 
     }
 

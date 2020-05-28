@@ -47,6 +47,9 @@ public class ExerciseDescriptionsInWorkoutControllers extends DragDismissControl
     @Override
     protected void onViewBound(@NonNull View view) {
         super.onViewBound(view);
+        if (this.name==null){
+            return;
+        }
         String name=this.name.replaceAll("\"","");
         textView.setText(name);
         imageView.setImageDrawable(getResources().getDrawable(ExerciseImageAndNameDataClass.getIntImageByName(name,getResources())));

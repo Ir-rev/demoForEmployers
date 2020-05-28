@@ -19,6 +19,7 @@ public class PushUpsDetailMenuController extends SwapAndOpenDetailController {
     }
 
 
+
     @Override
     protected void selectDescription(String title) {
 
