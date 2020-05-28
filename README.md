@@ -22,7 +22,7 @@ this demo include following libraries
 
 -picasso https://github.com/square/picasso
 
--espresso  
+-espresso/Barista https://github.com/AdevintaSpain/Barista 
 
 minSdkVersion 24
 targetSdkVersion 29
