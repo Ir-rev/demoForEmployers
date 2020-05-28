@@ -49,6 +49,8 @@ dependencies {
     }
     androidTestImplementation 'com.novoda:espresso-support:1.0.0'
     debugImplementation 'com.novoda:espresso-support-extras:1.0.0'
+    androidTestImplementation('com.schibsted.spain:barista:3.5.0') 
+
 
     implementation 'com.bluelinelabs:conductor:3.0.0-rc4'
     implementation 'com.bluelinelabs:conductor-androidx-transition:3.0.0-rc4'

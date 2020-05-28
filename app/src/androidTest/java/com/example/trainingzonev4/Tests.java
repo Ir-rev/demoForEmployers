@@ -27,13 +27,15 @@ import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.doesNotExist;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static com.schibsted.spain.barista.interaction.BaristaClickInteractions.clickOn;
+import static com.schibsted.spain.barista.interaction.BaristaListInteractions.clickListItem;
 import static junit.framework.TestCase.assertTrue;
 import static org.hamcrest.CoreMatchers.not;
 
 @RunWith(AndroidJUnit4.class)
 public class Tests {
 
-    private int percentTest=3;//1=100% 3=33% 5=20%
+    private int percentTest=3; //1=100% 3=33% 5=20%
     private Router router;
 
     @Rule
@@ -45,13 +47,13 @@ public class Tests {
 
     }
 
+
     @Test
     public void testHomeController() {
         Activity activity = testRule.getActivity();
         RecyclerView recyclerView = testRule.getActivity().findViewById(R.id.recycler_view);
         for (int i = 0; i < recyclerView.getAdapter().getItemCount(); i++) {
-            onView(withId(R.id.recycler_view))
-                    .perform(RecyclerViewActions.actionOnItemAtPosition(i, click()));
+            clickListItem(R.id.recycler_view,i);
             pressBack();
         }
     }
@@ -63,8 +65,6 @@ public class Tests {
         testRecyclerViewInControllers(new StartToWorkoutController());
         testRecyclerViewInControllers(new CreateAndEditExerciseListController());
         testRecyclerViewInControllers(new ImplementationExerciseListController(resources.getString(R.string.workout_fresh_blood)));
-
-
 
     }
 
@@ -106,8 +106,7 @@ public class Tests {
         }
 
         for (int i = 0; i < countElements;) {
-            onView(withId(R.id.recycler_view))
-                    .perform(RecyclerViewActions.actionOnItemAtPosition(i, click()));
+            clickListItem(R.id.recycler_view,i);
             pressBack();
 
             i+=step;
@@ -123,11 +122,13 @@ public class Tests {
                 new ImplementationExerciseListController(resources.getString(R.string.workout_fresh_blood));
 
         setUp(activity, implementationExerciseListController);
-        onView(withId(R.id.button_start)).perform(click());
+
+        clickOn(R.id.button_start);
 
         for (int i = 0; i < implementationExerciseListController.getExerciseArrayList().size(); i++) {
             onView(withId(R.id.imageButton)).check(matches(not(doesNotExist())));
-            onView(withId(R.id.imageButton)).perform(click());
+
+            clickOn(R.id.imageButton);
         }
 
 
@@ -159,11 +160,9 @@ public class Tests {
             step =getPercent(countElements);
         }
 
-        for (int i = 0; i < countElements;) {
-            onView(withId(R.id.recycler_view))
-                    .perform(RecyclerViewActions.actionOnItemAtPosition(i, click()));
+        for (int i = 0; i < countElements;i+=step) {
+            clickListItem(R.id.recycler_view,i);
             pressBack();
-            i+=step;
         }
 
         testRule.relaunchActivity();
