@@ -37,6 +37,6 @@ author of the book Paul Wade
 
 27.05.2020 Some tablets have animation issues. will fix
 
-28.05.2020 added espresso tests
+28.05.2020 espresso tests is added
 
 /**
