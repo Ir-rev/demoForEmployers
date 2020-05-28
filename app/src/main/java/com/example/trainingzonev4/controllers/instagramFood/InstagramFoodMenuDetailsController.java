@@ -4,6 +4,7 @@ import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -11,6 +12,8 @@ import androidx.annotation.NonNull;
 
 import com.example.trainingzonev4.R;
 import com.example.trainingzonev4.controllers.baseControllers.BaseController;
+
+import java.util.List;
 
 import butterknife.BindView;
 
@@ -20,6 +23,7 @@ public class InstagramFoodMenuDetailsController extends BaseController {
     ImageView imageView;
     @BindView(R.id.tv_description)
     TextView tvDescriptions;
+
 
     private String text;
     private Drawable image;
@@ -43,5 +47,6 @@ public class InstagramFoodMenuDetailsController extends BaseController {
         super.onViewBound(view);
         tvDescriptions.setText(text);
         imageView.setImageDrawable(image);
+
     }
 }

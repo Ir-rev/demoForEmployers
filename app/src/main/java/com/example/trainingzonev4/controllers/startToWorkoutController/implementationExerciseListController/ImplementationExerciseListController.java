@@ -35,7 +35,7 @@ import butterknife.OnClick;
 
 public class ImplementationExerciseListController extends BaseController {
 
-    class ExerciseListData {
+    public class ExerciseListData {
         int times;
         String name;
 
@@ -69,6 +69,10 @@ public class ImplementationExerciseListController extends BaseController {
 
     private LinkedList<ExerciseListData> exerciseArrayList;
     private String workoutListTAG;
+
+    public LinkedList<ExerciseListData> getExerciseArrayList() {
+        return exerciseArrayList;
+    }
 
     public ImplementationExerciseListController() {
 

@@ -68,11 +68,15 @@ public class RealmDatabase {
     }
 
     public void createDatabase() {
-        Realm.init(context);
-        RealmConfiguration config = new RealmConfiguration.Builder().name("exerciseList").build();
-        Realm.deleteRealm(config);
-        Realm.setDefaultConfiguration(config);
-        createTestData();
+        try {
+            Realm.init(context);
+            RealmConfiguration config = new RealmConfiguration.Builder().name("exerciseList").build();
+            Realm.deleteRealm(config);
+            Realm.setDefaultConfiguration(config);
+            createTestData();
+        }catch (IllegalStateException e){
+            e.printStackTrace();
+        }
     }
 
     private void createTestData() {

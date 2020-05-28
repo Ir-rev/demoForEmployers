@@ -46,7 +46,7 @@ public class InstagramFoodMenuController extends BaseController {
 
     @Override
     protected View inflateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container) {
-        return inflater.inflate(R.layout.controller_instagram_food_menu,container,false);
+        return inflater.inflate(R.layout.controller_instagram_food_menu, container, false);
     }
 
     @Override
@@ -63,12 +63,14 @@ public class InstagramFoodMenuController extends BaseController {
                     public void onResponse(@NonNull Call<InstagramDataPOJO> call, @NonNull Response<InstagramDataPOJO> response) {
                         InstagramDataPOJO instagramDataPOJO = response.body();
 
-                        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
+                        if (recyclerView != null) {
+                            recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
-                        InstagramFoodMenuListAdapter recyclerViewTableListAdapter =
-                                new InstagramFoodMenuListAdapter(instagramDataPOJO.getData(), getResources());
+                            InstagramFoodMenuListAdapter recyclerViewTableListAdapter =
+                                    new InstagramFoodMenuListAdapter(instagramDataPOJO.getData(), getResources());
 
-                        recyclerView.setAdapter(recyclerViewTableListAdapter);
+                            recyclerView.setAdapter(recyclerViewTableListAdapter);
+                        }
 
                     }
 
@@ -81,7 +83,7 @@ public class InstagramFoodMenuController extends BaseController {
                 });
     }
 
-    class InstagramFoodMenuListAdapter extends RecyclerView.Adapter<InstagramFoodMenuListAdapter.InstagramFoodMenuListHolder>{
+    class InstagramFoodMenuListAdapter extends RecyclerView.Adapter<InstagramFoodMenuListAdapter.InstagramFoodMenuListHolder> {
 
         private List<Datum> foodList;
         Resources resources;
@@ -108,7 +110,6 @@ public class InstagramFoodMenuController extends BaseController {
             }
 
         }
-
 
 
         @NonNull

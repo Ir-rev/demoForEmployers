@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements ActionBarProvider
         RealmDatabase realmDatabase =new RealmDatabase(this,getResources());
         realmDatabase.createDatabase();
 
+
         router = Conductor.attachRouter(this, container, savedInstanceState);
         if (!router.hasRootController()) {
             router.setRoot(RouterTransaction.with(new HomeMenuController()));
@@ -50,6 +51,10 @@ public class MainActivity extends AppCompatActivity implements ActionBarProvider
         if (!router.handleBack()) {
             super.onBackPressed();
         }
+    }
+
+    public Router getRouter(){
+        return router;
     }
 
 }
