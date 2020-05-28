@@ -1,13 +1,4 @@
 # demoForEmployers
-**/
-
-23.05.2020 the realm database is included. some bugs with description is possible
-
-26.05.2020 the starting is adding API instagram
-
-27.05.2020 Some tablets have animation issues. will fix
-
-/**
 
 this demo include following libraries
 
@@ -31,8 +22,21 @@ this demo include following libraries
 
 -picasso https://github.com/square/picasso
 
+-espresso  
+
 minSdkVersion 24
 targetSdkVersion 29
 
 author of the book Paul Wade
 
+**/
+
+23.05.2020 the realm database is included. some bugs with description is possible
+
+26.05.2020 the starting is adding API instagram
+
+27.05.2020 Some tablets have animation issues. will fix
+
+28.05.2020 added espresso tests
+
+/**
